@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: data-pipeline
+Version: 0.0.1
+Summary: A sample data pipeline package
+Home-page: https://github.com/sunil.baidyanath/data-pipeline
+Author: Sunil Thakur
+Author-email: sunil.thakur@gmail.com
+License: UNKNOWN
+Description: # Data Pipeline
+        
+        This is a sample project demonstrating usage of Python and AWS EMR to build a data pipeline.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

@@ -1,0 +1,15 @@
+{
+	"name": "aws",
+	"storage": {
+		"type": "s3"
+		
+	},
+	"compute": {
+		"engine": {
+			"type": "spark",
+			"options": {
+			
+			}
+		}
+	}
+}

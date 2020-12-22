@@ -1,0 +1,42 @@
+{
+	"name": "sample",
+	"datasources": [{
+		"name": "sample_input",
+		"type": "local",
+		"options": {
+			"filepath": "C:/New folder/work/input/",
+			"dataformat": {
+				"type": "csv",
+				"options": {
+					"sep": "|"
+				}
+			}
+		}
+	}, {
+		"name": "sample_output",
+		"type": "local",
+		"options": {
+			"filepath": "C:/New folder/work/output/",
+			"dataformat": {
+				"type": "csv",
+				"options": {
+					"sep": ","
+				}
+			}
+		}
+	}],
+	"tasks": [{
+		"name": "sample_task",
+		"type": "transform",
+		"depends_on": [],
+		"inputs": ["sample_input"],
+		"outputs": ["sample_output"],
+		"worker": {
+			"type": "transform",
+			"class": "pipelines.sample.transformers.SampleTransformer",
+			"params": {
+			
+			}
+		}
+	}]
+}

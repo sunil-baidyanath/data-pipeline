@@ -1,0 +1,44 @@
+{
+	"name": "sample",
+	"datasources": [{
+		"name": "sample_input",
+		"type": "s3",
+		"options": {
+			"bucket": "edh2",
+			"filepath": "data-pipeline/data/sample_input",
+			"dataformat": {
+				"type": "csv",
+				"options": {
+					"sep": "|"
+				}
+			}
+		}
+	}, {
+		"name": "sample_output",
+		"type": "s3",
+		"options": {
+			"bucket": "edh2",
+			"filepath": "data-pipeline/data/sample_output",
+			"dataformat": {
+				"type": "csv",
+				"options": {
+					"sep": ","
+				}
+			}
+		}
+	}],
+	"tasks": [{
+		"name": "sample_task",
+		"type": "transform",
+		"depends_on": [],
+		"inputs": ["sample_input"],
+		"outputs": ["sample_output"],
+		"worker": {
+			"type": "transform",
+			"class": "pipelines.sample.transformers.SampleTransformer",
+			"params": {
+			
+			}
+		}
+	}]
+}
